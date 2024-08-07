@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DietModel {
+class Diet {
   String name;
   String iconPath;
   String level;
@@ -9,7 +9,7 @@ class DietModel {
   Color boxColor;
   bool viewIsSelected;
 
-  DietModel({
+  Diet({
     required this.name,
     required this.iconPath,
     required this.level,
@@ -19,11 +19,10 @@ class DietModel {
     required this.viewIsSelected
   });
 
-  static List<DietModel> getDiets() {
-    List<DietModel> diets = [];
+  static List<Diet> getDiets() {
+    List<Diet> diets = [];
 
-    diets.add(
-      DietModel(
+    diets.add(Diet(
           name: 'Honey Pancake',
           iconPath: 'assets/icons/honey-pancakes.svg',
           level: 'Easy',
@@ -31,11 +30,9 @@ class DietModel {
           calorie: '180kCal',
           boxColor: const Color(0xFF9DCEFF),
           viewIsSelected: true
-      )
-    );
+    ));
 
-    diets.add(
-        DietModel(
+    diets.add(Diet(
             name: 'Canai Bread',
             iconPath: 'assets/icons/canai-bread.svg',
             level: 'Easy',
@@ -43,8 +40,7 @@ class DietModel {
             calorie: '230kCal',
             boxColor: const Color(0xFFEEA4CE),
             viewIsSelected: false
-        )
-    );
+    ));
 
     return diets;
   }
